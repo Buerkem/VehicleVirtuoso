@@ -13,6 +13,7 @@ import com.example.cardatabase.domain.Owner;
 
 @SpringBootApplication
 public class CardatabaseApplication {
+	//spring.datasource.url=jdbc:h2:mem:testdb
 	@Autowired
 	private CarRepository repository;
 	@Autowired

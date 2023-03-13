@@ -1,6 +1,8 @@
 package com.example.cardatabase.domain;
 
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.CascadeType;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Owner {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -50,11 +53,13 @@ public class Owner {
 	}
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="owner")
+	@JsonIgnore
 	private List<Car> cars;
 	//Getter and setter
 	public List<Car> getCars() {
 		return cars;
 	}
+	
 	public void setCars(List<Car> cars) {
 		this.cars = cars;
 	}
