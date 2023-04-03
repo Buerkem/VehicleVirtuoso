@@ -21,6 +21,16 @@ public class Car {
 	
 	public Car(){}
 	
+	public Car(String brand, String model, String color, String registerNumber,  int productionYear, int price) {
+		super();
+		this.brand = brand;
+		this.model = model;
+		this.color = color;
+		this.registerNumber = registerNumber;
+		this.productionYear = productionYear;
+		this.price = price;
+	}
+	
 	public Car(String brand, String model, String color,
 			String registerNumber, int productionYear, int price, Owner owner) {
 			super();
