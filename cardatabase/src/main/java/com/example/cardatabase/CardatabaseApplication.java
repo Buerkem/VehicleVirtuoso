@@ -11,8 +11,6 @@ import com.example.cardatabase.domain.CarRepository;
 import com.example.cardatabase.domain.OwnerRepository;
 import com.example.cardatabase.domain.User;
 import com.example.cardatabase.domain.UserRepository;
-//import com.example.cardatabase.domain.User;
-//import com.example.cardatabase.domain.UserRepository;
 import com.example.cardatabase.domain.Owner;
 
 @SpringBootApplication
